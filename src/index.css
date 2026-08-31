@@ -308,6 +308,7 @@ h1, h2, h3, h4 {
   position: relative;
   aspect-ratio: 4 / 5;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .product-visual .tex {
@@ -343,6 +344,103 @@ h1, h2, h3, h4 {
   color: var(--hivis);
   background: rgba(10, 10, 10, 0.55);
   padding: 3px 8px;
+}
+
+.product-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.94);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+  transition: opacity 0.22s ease, transform 0.22s ease;
+  cursor: default;
+}
+
+.product-overlay-active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.overlay-name {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.overlay-price {
+  font-size: 15px;
+  color: var(--hivis);
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.overlay-material {
+  font-size: 12.5px;
+  color: var(--white);
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.overlay-desc {
+  font-size: 12px;
+  color: var(--gray);
+  line-height: 1.5;
+}
+
+.overlay-label {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gray);
+  margin-bottom: 8px;
+}
+
+.size-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.size-btn {
+  font-size: 11px;
+  padding: 7px 11px;
+  border: 1px solid var(--line-strong);
+  background: transparent;
+  color: var(--white);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.size-btn-active {
+  border-color: var(--hivis);
+  background: var(--hivis);
+  color: var(--black);
+  font-weight: 700;
+}
+
+.overlay-add-btn {
+  width: 100%;
+  padding: 12px;
+  background: var(--hivis);
+  color: var(--black);
+  border: none;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  cursor: pointer;
+  clip-path: polygon(0 0, 100% 0, 100% 72%, 94% 100%, 0 100%);
+  transition: background 0.2s ease;
+}
+
+.overlay-add-btn:hover {
+  background: #EEFF7A;
 }
 
 .product-info {

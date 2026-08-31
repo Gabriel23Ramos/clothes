@@ -22,26 +22,30 @@ export function CartProvider({ children }) {
     localStorage.setItem(CART_KEY, JSON.stringify(cart));
   }, [cart, loaded]);
 
-  const addToCart = useCallback((product) => {
+  const addToCart = useCallback((product, size) => {
+    const lineId = size ? `${product.id}__${size}` : product.id;
     setCart((prev) => {
-      const existing = prev.find((i) => i.id === product.id);
+      const existing = prev.find((i) => i.lineId === lineId);
       if (existing) {
-        return prev.map((i) => (i.id === product.id ? { ...i, qty: i.qty + 1 } : i));
+        return prev.map((i) => (i.lineId === lineId ? { ...i, qty: i.qty + 1 } : i));
       }
-      return [...prev, { id: product.id, name: product.name, price: product.price, qty: 1 }];
+      return [
+        ...prev,
+        { lineId, id: product.id, name: product.name, price: product.price, size: size || null, qty: 1 },
+      ];
     });
   }, []);
 
-  const changeQty = useCallback((id, delta) => {
+  const changeQty = useCallback((lineId, delta) => {
     setCart((prev) =>
       prev
-        .map((i) => (i.id === id ? { ...i, qty: Math.max(0, i.qty + delta) } : i))
+        .map((i) => (i.lineId === lineId ? { ...i, qty: Math.max(0, i.qty + delta) } : i))
         .filter((i) => i.qty > 0)
     );
   }, []);
 
-  const removeItem = useCallback((id) => {
-    setCart((prev) => prev.filter((i) => i.id !== id));
+  const removeItem = useCallback((lineId) => {
+    setCart((prev) => prev.filter((i) => i.lineId !== lineId));
   }, []);
 
   const clearCart = useCallback(() => setCart([]), []);

@@ -42,20 +42,21 @@ export default function Cart() {
         <div className="cart-layout">
           <div className="cart-items">
             {cart.map((item) => (
-              <div key={item.id} className="cart-row">
+              <div key={item.lineId} className="cart-row">
                 <div className="cart-thumb" />
                 <div className="cart-row-info">
                   <h4>{item.name}</h4>
+                  {item.size && <p className="mono muted" style={{ fontSize: 11.5, marginTop: 2 }}>Tamanho: {item.size}</p>}
                   <p className="mono price">{formatBRL(item.price)}</p>
                   <div className="qty-controls">
-                    <button onClick={() => changeQty(item.id, -1)} aria-label="Diminuir quantidade">
+                    <button onClick={() => changeQty(item.lineId, -1)} aria-label="Diminuir quantidade">
                       <Minus size={12} />
                     </button>
                     <span className="mono">{item.qty}</span>
-                    <button onClick={() => changeQty(item.id, 1)} aria-label="Aumentar quantidade">
+                    <button onClick={() => changeQty(item.lineId, 1)} aria-label="Aumentar quantidade">
                       <Plus size={12} />
                     </button>
-                    <button onClick={() => removeItem(item.id)} aria-label="Remover item" className="remove-btn">
+                    <button onClick={() => removeItem(item.lineId)} aria-label="Remover item" className="remove-btn">
                       <Trash2 size={14} />
                     </button>
                   </div>
