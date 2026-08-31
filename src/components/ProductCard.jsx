@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { formatBRL } from "../data/products";
 import { useCart } from "../context/CartContext";
+import CategoryIcon from "./CategoryIcon";
 
 export default function ProductCard({ product }) {
   const { addToCart } = useCart();
@@ -29,6 +30,7 @@ export default function ProductCard({ product }) {
     >
       <div className="product-visual" onClick={toggleActive}>
         <div className="tex" style={{ background: product.tex }} />
+        <CategoryIcon category={product.category} className="product-icon" />
         <div className="corner-tag" />
         <span className="mono code-tag">{product.code}</span>
         <span className="mono category-tag">{product.category}</span>
