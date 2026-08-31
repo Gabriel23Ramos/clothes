@@ -10,25 +10,20 @@ export default function Home() {
   return (
     <>
       <section className="hero wrap">
-        <div className="hero-grid">
-          <div className="hero-copy">
-            <p className="eyebrow mono">Urban Vest Store — lançamento 01 / 2026</p>
-            <h1 className="hero-title">
-              Pronto pra rua.
-              <br />
-              <span className="cut">Feito pra voar.</span>
-            </h1>
-            <p className="hero-sub">
-              Colete, jaqueta e peça utilitária pro seu corre: reflexivo pra quem sai de noite,
-              resistente pra quem não para de se mexer.
-            </p>
-            <Link to="/loja" className="btn-primary mono">
-              Ver coleção →
-            </Link>
-          </div>
-          <div className="hero-logo-wrap">
-            <img src="/logo.png" alt="Urban Vest Store" className="hero-logo" />
-          </div>
+        <div className="hero-copy">
+          <p className="eyebrow mono">Urban Vest Store — lançamento 01 / 2026</p>
+          <h1 className="hero-title">
+            Pronto pra rua.
+            <br />
+            <span className="cut">Feito pra voar.</span>
+          </h1>
+          <p className="hero-sub">
+            Colete, jaqueta e peça utilitária pro seu corre: reflexivo pra quem sai de noite,
+            resistente pra quem não para de se mexer.
+          </p>
+          <Link to="/loja" className="btn-primary mono">
+            Ver coleção →
+          </Link>
         </div>
       </section>
 
