@@ -5,7 +5,7 @@ import ProductCard from "../components/ProductCard";
 import { PRODUCTS } from "../data/products";
 
 export default function Home() {
-  const featured = PRODUCTS.slice(0, 3);
+  const featured = PRODUCTS.filter((_, i) => i % 2 === 0).slice(0, 10);
 
   return (
     <>
@@ -35,7 +35,7 @@ export default function Home() {
               Começa <span className="hi">por aqui</span>
             </h2>
           </div>
-          <p className="section-sub">Três peças que resumem a coleção. O catálogo completo tá na Loja.</p>
+          <p className="section-sub">Uma amostra de cada categoria. O catálogo completo tá na Loja.</p>
         </div>
 
         <div className="product-grid">
