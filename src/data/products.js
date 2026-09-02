@@ -88,7 +88,7 @@ export const PRODUCTS = [
   {
     id: "uvs-006", code: "UVS / 006", name: "Regatão Técnico", spec: "DRY-FIT · SELADO", price: 219,
     category: "Camisetas",
-    image: "https://images.pexels.com/photos/11671964/pexels-photo-11671964.jpeg?auto=compress&cs=tinysrgb&w=800", tex: "linear-gradient(150deg,#38381F,#121208 70%)",
+    image: "https://images.pexels.com/photos/12025472/pexels-photo-12025472.jpeg?auto=compress&cs=tinysrgb&w=800", tex: "linear-gradient(150deg,#38381F,#121208 70%)",
     material: "Dry-fit com costura selada, seca rápido.",
     description: "Pra treino ou pra rua, não marca suor.",
     sizes: SIZES_CLOTHING,
@@ -96,7 +96,7 @@ export const PRODUCTS = [
   {
     id: "uvs-010", code: "UVS / 010", name: "Camiseta Oversized Urban", spec: "ALGODÃO PESADO", price: 149,
     category: "Camisetas",
-    image: "https://images.pexels.com/photos/2112636/pexels-photo-2112636.jpeg?auto=compress&cs=tinysrgb&w=800", tex: "linear-gradient(150deg,#333333,#101010 70%)",
+    image: "https://images.pexels.com/photos/8532616/pexels-photo-8532616.jpeg?auto=compress&cs=tinysrgb&w=800", tex: "linear-gradient(150deg,#333333,#101010 70%)",
     material: "Algodão 100% penteado, 220g/m².",
     description: "Caimento oversized sem perder estrutura.",
     sizes: [...SIZES_CLOTHING, "GGG"],
@@ -104,7 +104,7 @@ export const PRODUCTS = [
   {
     id: "uvs-011", code: "UVS / 011", name: "Camiseta Refletiva Print", spec: "SILK · TRIM 3M", price: 169,
     category: "Camisetas",
-    image: "https://images.pexels.com/photos/2112636/pexels-photo-2112636.jpeg?auto=compress&cs=tinysrgb&w=800", tex: "linear-gradient(150deg,#3A3A34,#111110 70%)",
+    image: "https://images.pexels.com/photos/12039633/pexels-photo-12039633.jpeg?auto=compress&cs=tinysrgb&w=800", tex: "linear-gradient(150deg,#3A3A34,#111110 70%)",
     material: "Algodão com estampa serigrafada refletiva 3M.",
     description: "De dia é só estampa, de noite acende no flash.",
     sizes: SIZES_CLOTHING,
@@ -112,7 +112,7 @@ export const PRODUCTS = [
   {
     id: "uvs-012", code: "UVS / 012", name: "Longsleeve Técnica", spec: "DRY-FIT · UV50", price: 189,
     category: "Camisetas",
-    image: "https://images.pexels.com/photos/2112636/pexels-photo-2112636.jpeg?auto=compress&cs=tinysrgb&w=800", tex: "linear-gradient(150deg,#35352F,#0F0F0D 70%)",
+    image: "https://images.pexels.com/photos/8532638/pexels-photo-8532638.jpeg?auto=compress&cs=tinysrgb&w=800", tex: "linear-gradient(150deg,#35352F,#0F0F0D 70%)",
     material: "Poliamida com proteção solar UV50+.",
     description: "Manga longa leve, ideal pra sol direto o dia inteiro.",
     sizes: SIZES_CLOTHING,
@@ -120,7 +120,7 @@ export const PRODUCTS = [
   {
     id: "uvs-018", code: "UVS / 018", name: "Camiseta Básica Reforçada", spec: "ALGODÃO 30.1", price: 129,
     category: "Camisetas",
-    image: "https://images.pexels.com/photos/2112636/pexels-photo-2112636.jpeg?auto=compress&cs=tinysrgb&w=800", tex: "linear-gradient(150deg,#303028,#0D0D08 70%)",
+    image: "https://images.pexels.com/photos/8532611/pexels-photo-8532611.jpeg?auto=compress&cs=tinysrgb&w=800", tex: "linear-gradient(150deg,#303028,#0D0D08 70%)",
     material: "Algodão 30.1 fio penteado, gola trava.",
     description: "O básico que não desbota nem estica depois de lavar.",
     sizes: [...SIZES_CLOTHING, "GGG"],
