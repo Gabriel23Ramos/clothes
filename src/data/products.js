@@ -6,7 +6,7 @@ export const PRODUCTS = [
   {
     id: "uvs-001", code: "UVS / 001", name: "Colete Tático 01", spec: "420G · RIPSTOP", price: 349,
     category: "Coletes",
-    image: "https://images.pexels.com/photos/10141053/pexels-photo-10141053.jpeg?auto=compress&cs=tinysrgb&w=800", tex: "linear-gradient(150deg,#3A3A3A,#141414 70%)",
+    image: "https://images.pexels.com/photos/36593273/pexels-photo-36593273.jpeg?auto=compress&cs=tinysrgb&w=800", tex: "linear-gradient(150deg,#3A3A3A,#141414 70%)",
     material: "Nylon ripstop 420g, resistente a rasgo, forro interno respirável.",
     description: "Bolsos reforçados, fecho rápido e ajuste lateral. Pensado pra quem vive na rua.",
     sizes: SIZES_CLOTHING,
@@ -14,7 +14,7 @@ export const PRODUCTS = [
   {
     id: "uvs-003", code: "UVS / 003", name: "Colete Utilitário", spec: "BRIM · 6 BOLSOS", price: 389,
     category: "Coletes",
-    image: "https://images.pexels.com/photos/10141053/pexels-photo-10141053.jpeg?auto=compress&cs=tinysrgb&w=800", tex: "linear-gradient(150deg,#333330,#101010 70%)",
+    image: "https://images.pexels.com/photos/36593273/pexels-photo-36593273.jpeg?auto=compress&cs=tinysrgb&w=800", tex: "linear-gradient(150deg,#333330,#101010 70%)",
     material: "Brim 100% algodão, gramatura pesada.",
     description: "Seis bolsos posicionados pra carregar o essencial sem parecer mochila.",
     sizes: SIZES_CLOTHING,
@@ -22,7 +22,7 @@ export const PRODUCTS = [
   {
     id: "uvs-005", code: "UVS / 005", name: "Cargo Vest", spec: "SARJA · REFORÇADO", price: 359,
     category: "Coletes",
-    image: "https://images.pexels.com/photos/10141053/pexels-photo-10141053.jpeg?auto=compress&cs=tinysrgb&w=800", tex: "linear-gradient(150deg,#363634,#121210 70%)",
+    image: "https://images.pexels.com/photos/36593273/pexels-photo-36593273.jpeg?auto=compress&cs=tinysrgb&w=800", tex: "linear-gradient(150deg,#363634,#121210 70%)",
     material: "Sarja reforçada, costura dupla nos pontos de tensão.",
     description: "Corte reto, caimento solto, feito pra durar o ano todo.",
     sizes: SIZES_CLOTHING,
@@ -30,7 +30,7 @@ export const PRODUCTS = [
   {
     id: "uvs-007", code: "UVS / 007", name: "Colete Refletivo Noturno", spec: "TRIM 3M · TOTAL", price: 399,
     category: "Coletes",
-    image: "https://images.pexels.com/photos/10141053/pexels-photo-10141053.jpeg?auto=compress&cs=tinysrgb&w=800", tex: "linear-gradient(150deg,#2E2E2E,#0F0F0F 70%)",
+    image: "https://images.pexels.com/photos/36593273/pexels-photo-36593273.jpeg?auto=compress&cs=tinysrgb&w=800", tex: "linear-gradient(150deg,#2E2E2E,#0F0F0F 70%)",
     material: "Nylon leve com faixas refletivas certificadas 3M em todo o contorno.",
     description: "Visibilidade total pra quem anda de bike ou moto à noite.",
     sizes: SIZES_CLOTHING,
@@ -38,7 +38,7 @@ export const PRODUCTS = [
   {
     id: "uvs-016", code: "UVS / 016", name: "Colete Acolchoado Inverno", spec: "MATELASSÊ · 100G", price: 459,
     category: "Coletes",
-    image: "https://images.pexels.com/photos/10141053/pexels-photo-10141053.jpeg?auto=compress&cs=tinysrgb&w=800", tex: "linear-gradient(150deg,#42423E,#151512 70%)",
+    image: "https://images.pexels.com/photos/36593273/pexels-photo-36593273.jpeg?auto=compress&cs=tinysrgb&w=800", tex: "linear-gradient(150deg,#42423E,#151512 70%)",
     material: "Nylon matelassê com enchimento sintético 100g.",
     description: "Peso leve, aquece sem travar o movimento.",
     sizes: SIZES_CLOTHING,
@@ -47,7 +47,7 @@ export const PRODUCTS = [
   {
     id: "uvs-002", code: "UVS / 002", name: "Corta-vento Reflective", spec: "NYLON · TRIM 3M", price: 429,
     category: "Jaquetas",
-    image: "https://images.pexels.com/photos/21777956/pexels-photo-21777956.jpeg?auto=compress&cs=tinysrgb&w=800", tex: "linear-gradient(150deg,#4A4A46,#181818 70%)",
+    image: "https://images.pexels.com/photos/36593273/pexels-photo-36593273.jpeg?auto=compress&cs=tinysrgb&w=800", tex: "linear-gradient(150deg,#4A4A46,#181818 70%)",
     material: "Nylon 100% impermeável, costuras seladas, trim refletivo 3M.",
     description: "Corta o vento de verdade. Capuz ajustável e bolso interno pra celular.",
     sizes: SIZES_CLOTHING,
@@ -55,7 +55,7 @@ export const PRODUCTS = [
   {
     id: "uvs-004", code: "UVS / 004", name: "Jaqueta Shell", spec: "IMPERMEÁVEL LEVE", price: 479,
     category: "Jaquetas",
-    image: "https://images.pexels.com/photos/21777956/pexels-photo-21777956.jpeg?auto=compress&cs=tinysrgb&w=800", tex: "linear-gradient(150deg,#40403C,#151512 70%)",
+    image: "https://images.pexels.com/photos/36593273/pexels-photo-36593273.jpeg?auto=compress&cs=tinysrgb&w=800", tex: "linear-gradient(150deg,#40403C,#151512 70%)",
     material: "Shell duas camadas, impermeabilidade 5.000mm.",
     description: "Aguenta chuva forte sem perder o caimento urbano.",
     sizes: SIZES_CLOTHING,
@@ -63,7 +63,7 @@ export const PRODUCTS = [
   {
     id: "uvs-008", code: "UVS / 008", name: "Jaqueta Bomber Urbana", spec: "FORRO TÉRMICO", price: 459,
     category: "Jaquetas",
-    image: "https://images.pexels.com/photos/21777956/pexels-photo-21777956.jpeg?auto=compress&cs=tinysrgb&w=800", tex: "linear-gradient(150deg,#3D3D3D,#131313 70%)",
+    image: "https://images.pexels.com/photos/36593273/pexels-photo-36593273.jpeg?auto=compress&cs=tinysrgb&w=800", tex: "linear-gradient(150deg,#3D3D3D,#131313 70%)",
     material: "Poliéster com forro térmico e punho em ribana.",
     description: "Clássica, mas com reforço técnico que bomber nenhuma tem.",
     sizes: SIZES_CLOTHING,
@@ -71,7 +71,7 @@ export const PRODUCTS = [
   {
     id: "uvs-009", code: "UVS / 009", name: "Corta-vento Neon", spec: "RIPSTOP LEVE", price: 399,
     category: "Jaquetas",
-    image: "https://images.pexels.com/photos/21777956/pexels-photo-21777956.jpeg?auto=compress&cs=tinysrgb&w=800", tex: "linear-gradient(150deg,#454538,#121208 70%)",
+    image: "https://images.pexels.com/photos/36593273/pexels-photo-36593273.jpeg?auto=compress&cs=tinysrgb&w=800", tex: "linear-gradient(150deg,#454538,#121208 70%)",
     material: "Ripstop ultraleve 90g.",
     description: "Dobra e cabe na palma da mão. Pra levar sempre na mochila.",
     sizes: SIZES_CLOTHING,
@@ -79,7 +79,7 @@ export const PRODUCTS = [
   {
     id: "uvs-017", code: "UVS / 017", name: "Jaqueta Trucker Reforçada", spec: "SARJA 14OZ", price: 419,
     category: "Jaquetas",
-    image: "https://images.pexels.com/photos/21777956/pexels-photo-21777956.jpeg?auto=compress&cs=tinysrgb&w=800", tex: "linear-gradient(150deg,#39392F,#101008 70%)",
+    image: "https://images.pexels.com/photos/36593273/pexels-photo-36593273.jpeg?auto=compress&cs=tinysrgb&w=800", tex: "linear-gradient(150deg,#39392F,#101008 70%)",
     material: "Sarja 14oz com reforço em ombro e cotovelo.",
     description: "Resiste ao atrito do dia a dia sem furar.",
     sizes: SIZES_CLOTHING,
@@ -129,7 +129,7 @@ export const PRODUCTS = [
   {
     id: "uvs-013", code: "UVS / 013", name: "Boné Urban Vest", spec: "ABA RETA · AJUSTÁVEL", price: 129,
     category: "Acessórios",
-    image: "https://images.pexels.com/photos/12111440/pexels-photo-12111440.jpeg?auto=compress&cs=tinysrgb&w=800", tex: "linear-gradient(150deg,#3E3E3E,#131313 70%)",
+    image: "https://images.pexels.com/photos/36593273/pexels-photo-36593273.jpeg?auto=compress&cs=tinysrgb&w=800", tex: "linear-gradient(150deg,#3E3E3E,#131313 70%)",
     material: "Sarja com fecho de metal ajustável.",
     description: "Aba reta, bordado discreto na frente.",
     sizes: ["Único (ajustável)"],
@@ -137,7 +137,7 @@ export const PRODUCTS = [
   {
     id: "uvs-014", code: "UVS / 014", name: "Bolsa Transversal Tática", spec: "IMPERMEÁVEL", price: 199,
     category: "Acessórios",
-    image: "https://images.pexels.com/photos/12111440/pexels-photo-12111440.jpeg?auto=compress&cs=tinysrgb&w=800", tex: "linear-gradient(150deg,#363630,#101010 70%)",
+    image: "https://images.pexels.com/photos/36593273/pexels-photo-36593273.jpeg?auto=compress&cs=tinysrgb&w=800", tex: "linear-gradient(150deg,#363630,#101010 70%)",
     material: "Nylon impermeável com zíper reforçado.",
     description: "Compartimento pra celular, chave e carteira, sem parecer pochete de feira.",
     sizes: ["Único"],
@@ -145,7 +145,7 @@ export const PRODUCTS = [
   {
     id: "uvs-015", code: "UVS / 015", name: "Meia Refletiva Pack 3", spec: "ALGODÃO · TRIM", price: 79,
     category: "Acessórios",
-    image: "https://images.pexels.com/photos/12111440/pexels-photo-12111440.jpeg?auto=compress&cs=tinysrgb&w=800", tex: "linear-gradient(150deg,#303030,#0D0D0D 70%)",
+    image: "https://images.pexels.com/photos/36593273/pexels-photo-36593273.jpeg?auto=compress&cs=tinysrgb&w=800", tex: "linear-gradient(150deg,#303030,#0D0D0D 70%)",
     material: "Algodão com fio refletivo no cano.",
     description: "Kit com 3 pares, cano médio.",
     sizes: ["34-38", "39-44"],
@@ -153,7 +153,7 @@ export const PRODUCTS = [
   {
     id: "uvs-019", code: "UVS / 019", name: "Cinto Tático", spec: "NYLON TRANÇADO", price: 89,
     category: "Acessórios",
-    image: "https://images.pexels.com/photos/12111440/pexels-photo-12111440.jpeg?auto=compress&cs=tinysrgb&w=800", tex: "linear-gradient(150deg,#33332B,#0F0F09 70%)",
+    image: "https://images.pexels.com/photos/36593273/pexels-photo-36593273.jpeg?auto=compress&cs=tinysrgb&w=800", tex: "linear-gradient(150deg,#33332B,#0F0F09 70%)",
     material: "Nylon trançado com fivela de metal.",
     description: "Combina com colete e cargo, resistente a tração.",
     sizes: ["Único (ajustável)"],
@@ -161,7 +161,7 @@ export const PRODUCTS = [
   {
     id: "uvs-020", code: "UVS / 020", name: "Bandana Urbana", spec: "POLIÉSTER RESPIRÁVEL", price: 59,
     category: "Acessórios",
-    image: "https://images.pexels.com/photos/12111440/pexels-photo-12111440.jpeg?auto=compress&cs=tinysrgb&w=800", tex: "linear-gradient(150deg,#2E2E2E,#0C0C0C 70%)",
+    image: "https://images.pexels.com/photos/36593273/pexels-photo-36593273.jpeg?auto=compress&cs=tinysrgb&w=800", tex: "linear-gradient(150deg,#2E2E2E,#0C0C0C 70%)",
     material: "Poliéster respirável.",
     description: "Proteção contra poeira e frio. Dobra e vira touca.",
     sizes: ["Único"],
