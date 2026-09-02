@@ -88,7 +88,7 @@ export const PRODUCTS = [
   {
     id: "uvs-006", code: "UVS / 006", name: "Regatão Técnico", spec: "DRY-FIT · SELADO", price: 219,
     category: "Camisetas",
-    image: "https://images.pexels.com/photos/2112636/pexels-photo-2112636.jpeg?auto=compress&cs=tinysrgb&w=800", tex: "linear-gradient(150deg,#38381F,#121208 70%)",
+    image: "https://images.pexels.com/photos/11671964/pexels-photo-11671964.jpeg?auto=compress&cs=tinysrgb&w=800", tex: "linear-gradient(150deg,#38381F,#121208 70%)",
     material: "Dry-fit com costura selada, seca rápido.",
     description: "Pra treino ou pra rua, não marca suor.",
     sizes: SIZES_CLOTHING,

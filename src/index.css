@@ -746,17 +746,6 @@ input:focus {
   .cart-layout {
     grid-template-columns: 1fr;
   }
-  .hero-grid {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .hero-logo-wrap {
-    order: -1;
-  }
-  .hero-logo {
-    width: 180px;
-    max-width: 60vw;
-  }
 }
 
 @media (max-width: 640px) {
