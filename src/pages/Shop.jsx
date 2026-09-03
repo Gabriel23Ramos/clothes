@@ -25,10 +25,10 @@ export default function Shop() {
         <div>
           <p className="eyebrow mono">Catálogo atual — {filtered.length} peças</p>
           <h2>
-            Peça que <span className="hi">acompanha</span> o role
+            Peça que <span className="hi">aguenta</span> o treino
           </h2>
         </div>
-        <p className="section-sub">Sem frescura. Cada peça com ficha técnica de verdade: peso, tecido e reforço.</p>
+        <p className="section-sub">Sem frescura. Cada peça com ficha técnica de verdade: compressão, tecido e ajuste.</p>
       </div>
 
       <CategoryTabs active={activeCategory} onChange={setActiveCategory} />

@@ -11,15 +11,15 @@ export default function Home() {
     <>
       <section className="hero wrap">
         <div className="hero-copy">
-          <p className="eyebrow mono">Urban Vest Store — lançamento 01 / 2026</p>
+          <p className="eyebrow mono">Urban Vest Store — linha treino 01 / 2026</p>
           <h1 className="hero-title">
-            Pronto pra rua.
+            Pronto pro treino.
             <br />
-            <span className="cut">Feito pra voar.</span>
+            <span className="cut">Feito pra evoluir.</span>
           </h1>
           <p className="hero-sub">
-            Colete, jaqueta e peça utilitária pro seu corre: reflexivo pra quem sai de noite,
-            resistente pra quem não para de se mexer.
+            Legging, top e corta-vento pro seu treino: compressão que ajuda, reflexivo pra
+            treinar de noite, respiro que não pesa.
           </p>
           <Link to="/loja" className="btn-primary mono">
             Ver coleção →
@@ -32,9 +32,9 @@ export default function Home() {
       <section className="wrap section">
         <div className="section-head">
           <div>
-            <p className="eyebrow mono">Destaques do lançamento</p>
+            <p className="eyebrow mono">Destaques da linha treino</p>
             <h2>
-              Começa <span className="hi">por aqui</span>
+              Bora <span className="hi">começar</span>
             </h2>
           </div>
           <p className="section-sub">Uma amostra de cada categoria. O catálogo completo tá na Loja.</p>
