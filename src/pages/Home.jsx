@@ -9,28 +9,30 @@ export default function Home() {
 
   return (
     <>
-      <section className="hero wrap hero-centered">
-        <div className="hero-copy">
-          <p className="eyebrow mono" style={{ justifyContent: "center" }}>Urban Vest Store — linha treino 01 / 2026</p>
-          <h1 className="hero-title">
-            Pronto pro treino.
-            <br />
-            <span className="cut">Feito pra evoluir.</span>
-          </h1>
-          <p className="hero-sub">
-            Legging, top e corta-vento pro seu treino: compressão que ajuda, reflexivo pra
-            treinar de noite, respiro que não pesa.
-          </p>
-          <Link to="/loja" className="btn-primary mono">
-            Ver coleção →
-          </Link>
-        </div>
+      <section className="hero wrap">
+        <div className="hero-grid">
+          <div className="hero-copy">
+            <p className="eyebrow mono">Urban Vest Store — linha treino 01 / 2026</p>
+            <h1 className="hero-title">
+              Pronto pro treino.
+              <br />
+              <span className="cut">Feito pra evoluir.</span>
+            </h1>
+            <p className="hero-sub">
+              Legging, top e corta-vento pro seu treino: compressão que ajuda, reflexivo pra
+              treinar de noite, respiro que não pesa.
+            </p>
+            <Link to="/loja" className="btn-primary mono">
+              Ver coleção →
+            </Link>
+          </div>
 
-        <img
-          src="/hero-showcase.png"
-          alt="Loja física conceito Urban Vest Store"
-          className="hero-showcase"
-        />
+          <img
+            src="/hero-showcase.png"
+            alt="Loja física conceito Urban Vest Store"
+            className="hero-showcase"
+          />
+        </div>
       </section>
 
       <HazardStrip />
