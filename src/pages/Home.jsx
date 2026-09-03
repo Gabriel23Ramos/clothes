@@ -9,9 +9,9 @@ export default function Home() {
 
   return (
     <>
-      <section className="hero wrap">
+      <section className="hero wrap hero-centered">
         <div className="hero-copy">
-          <p className="eyebrow mono">Urban Vest Store — linha treino 01 / 2026</p>
+          <p className="eyebrow mono" style={{ justifyContent: "center" }}>Urban Vest Store — linha treino 01 / 2026</p>
           <h1 className="hero-title">
             Pronto pro treino.
             <br />
@@ -25,6 +25,12 @@ export default function Home() {
             Ver coleção →
           </Link>
         </div>
+
+        <img
+          src="/hero-showcase.png"
+          alt="Loja física conceito Urban Vest Store"
+          className="hero-showcase"
+        />
       </section>
 
       <HazardStrip />
