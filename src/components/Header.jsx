@@ -1,13 +1,15 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { ShoppingBag, User, LogOut, ChevronDown } from "lucide-react";
+import { ShoppingBag, User, LogOut, ChevronDown, Heart } from "lucide-react";
 import { useCart } from "../context/CartContext";
 import { useAuth } from "../context/AuthContext";
+import { useFavorites } from "../context/FavoritesContext";
 import { CATEGORIES } from "../data/products";
 
 export default function Header() {
   const { totalItems } = useCart();
   const { account, isLoggedIn, logOut } = useAuth();
+  const { totalFavorites } = useFavorites();
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef(null);
@@ -77,6 +79,11 @@ export default function Header() {
               <User size={14} /> Entrar
             </Link>
           )}
+
+          <Link to="/favoritos" className="favorites-link" aria-label="Favoritos">
+            <Heart size={17} />
+            {totalFavorites > 0 && <span className="favorites-count mono">{totalFavorites}</span>}
+          </Link>
 
           <Link to="/carrinho" className="cart-btn">
             <ShoppingBag size={15} />

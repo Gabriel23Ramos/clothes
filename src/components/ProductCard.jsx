@@ -1,20 +1,30 @@
 import React, { useState } from "react";
+import { Heart } from "lucide-react";
 import { formatBRL } from "../data/products";
 import { useCart } from "../context/CartContext";
+import { useFavorites } from "../context/FavoritesContext";
 
 export default function ProductCard({ product }) {
   const { addToCart } = useCart();
+  const { isFavorite, toggleFavorite } = useFavorites();
   const [active, setActive] = useState(false);
   const [selectedSize, setSelectedSize] = useState(
     product.sizes[Math.floor(product.sizes.length / 2)]
   );
   const [justAdded, setJustAdded] = useState(false);
 
+  const favorited = isFavorite(product.id);
+
   function handleAdd(e) {
     e.stopPropagation();
     addToCart(product, selectedSize);
     setJustAdded(true);
     window.setTimeout(() => setJustAdded(false), 1400);
+  }
+
+  function handleFavorite(e) {
+    e.stopPropagation();
+    toggleFavorite(product.id);
   }
 
   function toggleActive() {
@@ -32,6 +42,15 @@ export default function ProductCard({ product }) {
         <div className="corner-tag" />
         <span className="mono code-tag">{product.code}</span>
         <span className="mono category-tag">{product.category}</span>
+
+        <button
+          className={`favorite-btn ${favorited ? "favorite-btn-active" : ""}`}
+          onClick={handleFavorite}
+          aria-label={favorited ? "Remover dos favoritos" : "Adicionar aos favoritos"}
+          aria-pressed={favorited}
+        >
+          <Heart size={16} fill={favorited ? "currentColor" : "none"} />
+        </button>
 
         <div className={`product-overlay ${active ? "product-overlay-active" : ""}`}>
           <div>
