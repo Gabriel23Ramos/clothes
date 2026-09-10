@@ -86,10 +86,6 @@ export default function Login() {
           {mode === "login" ? "Entrar" : "Criar conta"}
         </button>
       </form>
-
-      <p className="mono muted" style={{ fontSize: 11, marginTop: 20, lineHeight: 1.6 }}>
-        Protótipo de demonstração: os dados de conta ficam salvos só neste navegador, sem backend real por trás.
-      </p>
     </section>
   );
 }

@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { ShoppingBag, User, LogOut, ChevronDown, Heart } from "lucide-react";
+import { ShoppingBag, User, LogOut, ChevronDown, Heart, Menu, X } from "lucide-react";
 import { useCart } from "../context/CartContext";
 import { useAuth } from "../context/AuthContext";
 import { useFavorites } from "../context/FavoritesContext";
@@ -12,6 +12,7 @@ export default function Header() {
   const { totalFavorites } = useFavorites();
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const menuRef = useRef(null);
 
   useEffect(() => {
@@ -27,17 +28,19 @@ export default function Header() {
   function handleLogOut() {
     logOut();
     navigate("/");
+    setMobileOpen(false);
   }
 
   function goToCategory(cat) {
     setMenuOpen(false);
+    setMobileOpen(false);
     navigate(cat === "Todos" ? "/loja" : `/loja?categoria=${encodeURIComponent(cat)}`);
   }
 
   return (
     <header className="site-header">
       <div className="wrap navbar">
-        <Link to="/" className="brand">
+        <Link to="/" className="brand" onClick={() => setMobileOpen(false)}>
           <img src="/logo.png" alt="Urban Vest Store" className="brand-logo" />
         </Link>
 
@@ -79,18 +82,55 @@ export default function Header() {
               <User size={14} /> Entrar
             </Link>
           )}
+        </nav>
 
+        <div className="header-actions">
           <Link to="/favoritos" className="favorites-link" aria-label="Favoritos">
-            <Heart size={17} />
+            <Heart size={18} />
             {totalFavorites > 0 && <span className="favorites-count mono">{totalFavorites}</span>}
           </Link>
 
           <Link to="/carrinho" className="cart-btn">
             <ShoppingBag size={15} />
-            SACOLA · {totalItems}
+            <span className="cart-btn-label">SACOLA · {totalItems}</span>
           </Link>
-        </nav>
+
+          <button
+            className="mobile-menu-btn"
+            onClick={() => setMobileOpen((v) => !v)}
+            aria-label="Abrir menu"
+            aria-expanded={mobileOpen}
+          >
+            {mobileOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
+        </div>
       </div>
+
+      {mobileOpen && (
+        <div className="mobile-nav">
+          <Link to="/" onClick={() => setMobileOpen(false)}>Início</Link>
+          <Link to="/loja" onClick={() => setMobileOpen(false)}>Loja</Link>
+
+          <p className="mono mobile-nav-label">Categorias</p>
+          <div className="mobile-nav-categories">
+            {CATEGORIES.map((cat) => (
+              <button key={cat} onClick={() => goToCategory(cat)} className="mono">
+                {cat}
+              </button>
+            ))}
+          </div>
+
+          {isLoggedIn ? (
+            <button onClick={handleLogOut} className="mobile-nav-account">
+              <LogOut size={14} /> Sair ({account.name.split(" ")[0]})
+            </button>
+          ) : (
+            <Link to="/login" onClick={() => setMobileOpen(false)}>
+              <User size={14} style={{ marginRight: 8 }} /> Entrar
+            </Link>
+          )}
+        </div>
+      )}
     </header>
   );
 }

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Heart } from "lucide-react";
-import { formatBRL } from "../data/products";
+import { formatBRL, discountPercent } from "../data/products";
 import { useCart } from "../context/CartContext";
 import { useFavorites } from "../context/FavoritesContext";
 
@@ -14,6 +14,7 @@ export default function ProductCard({ product }) {
   const [justAdded, setJustAdded] = useState(false);
 
   const favorited = isFavorite(product.id);
+  const discount = discountPercent(product.price, product.originalPrice);
 
   function handleAdd(e) {
     e.stopPropagation();
@@ -41,6 +42,7 @@ export default function ProductCard({ product }) {
         <img src={product.image} alt={product.name} className="product-photo" loading="lazy" />
         <div className="corner-tag" />
         <span className="mono code-tag">{product.code}</span>
+        {discount > 0 && <span className="mono discount-badge">-{discount}%</span>}
         <span className="mono category-tag">{product.category}</span>
 
         <button
@@ -55,7 +57,12 @@ export default function ProductCard({ product }) {
         <div className={`product-overlay ${active ? "product-overlay-active" : ""}`}>
           <div>
             <h3 className="overlay-name">{product.name}</h3>
-            <p className="mono overlay-price">{formatBRL(product.price)}</p>
+            <p className="mono overlay-price">
+              {product.originalPrice && (
+                <span className="overlay-price-original">{formatBRL(product.originalPrice)}</span>
+              )}
+              {formatBRL(product.price)}
+            </p>
             <p className="overlay-material">{product.material}</p>
             <p className="overlay-desc">{product.description}</p>
           </div>
@@ -86,6 +93,9 @@ export default function ProductCard({ product }) {
           <p className="mono spec">{product.spec}</p>
         </div>
         <div className="product-side">
+          {product.originalPrice && (
+            <p className="mono price-original">{formatBRL(product.originalPrice)}</p>
+          )}
           <p className="mono price">{formatBRL(product.price)}</p>
         </div>
       </div>

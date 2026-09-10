@@ -2,10 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import HazardStrip from "../components/HazardStrip";
 import ProductCard from "../components/ProductCard";
-import { PRODUCTS } from "../data/products";
+import { PRODUCTS, CATEGORIES, discountPercent } from "../data/products";
 
 export default function Home() {
   const featured = PRODUCTS.filter((_, i) => i % 2 === 0).slice(0, 10);
+
+  const categoryDeals = CATEGORIES.filter((c) => c !== "Todos").map((cat) => {
+    const items = PRODUCTS.filter((p) => p.category === cat);
+    const maxDiscount = Math.max(...items.map((p) => discountPercent(p.price, p.originalPrice)));
+    return { category: cat, maxDiscount };
+  });
 
   return (
     <>
@@ -32,6 +38,21 @@ export default function Home() {
             alt="Loja física conceito Urban Vest Store"
             className="hero-showcase"
           />
+        </div>
+      </section>
+
+      <HazardStrip />
+
+      <section className="wrap deals-section">
+        <p className="eyebrow mono">Categorias em destaque</p>
+        <div className="deals-grid">
+          {categoryDeals.map((d) => (
+            <Link key={d.category} to={`/loja?categoria=${encodeURIComponent(d.category)}`} className="deal-tile">
+              <span className="mono deal-discount">até {d.maxDiscount}% off</span>
+              <span className="deal-name">{d.category}</span>
+              <span className="mono deal-cta">Descubra →</span>
+            </Link>
+          ))}
         </div>
       </section>
 

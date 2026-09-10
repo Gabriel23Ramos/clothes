@@ -6,6 +6,7 @@ import { FavoritesProvider } from "./context/FavoritesContext";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import HazardStrip from "./components/HazardStrip";
+import PromoBar from "./components/PromoBar";
 import Home from "./pages/Home";
 import Shop from "./pages/Shop";
 import Cart from "./pages/Cart";
@@ -18,6 +19,7 @@ export default function App() {
     <AuthProvider>
       <FavoritesProvider>
         <CartProvider>
+          <PromoBar />
           <HazardStrip />
           <Header />
           <main>
