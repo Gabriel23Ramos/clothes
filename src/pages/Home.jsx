@@ -45,11 +45,13 @@ export default function Home() {
 
       <section className="wrap gender-section">
         <Link to="/loja?genero=Masculino" className="gender-banner gender-banner-m">
+          <img src="/runner-male.png" alt="" className="gender-photo gender-photo-m" aria-hidden="true" />
           <span className="mono gender-eyebrow">Para o treino</span>
           <span className="gender-title">Masculino</span>
           <span className="mono gender-cta">Comprar agora →</span>
         </Link>
         <Link to="/loja?genero=Feminino" className="gender-banner gender-banner-f">
+          <img src="/runner-female.png" alt="" className="gender-photo gender-photo-f" aria-hidden="true" />
           <span className="mono gender-eyebrow">Para o treino</span>
           <span className="gender-title">Feminino</span>
           <span className="mono gender-cta">Comprar agora →</span>

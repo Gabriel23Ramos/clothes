@@ -487,11 +487,63 @@ h1, h2, h3, h4 {
   border-color: var(--hivis);
 }
 
+.gender-photo {
+  position: absolute;
+  bottom: 0;
+  height: 108%;
+  width: auto;
+  max-width: 60%;
+  object-fit: contain;
+  z-index: 0;
+  opacity: 0;
+  filter: grayscale(35%) contrast(1.05);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events: none;
+}
+
+.gender-photo-m {
+  right: -4%;
+  transform: translateY(16px) scale(0.97);
+}
+
+.gender-photo-f {
+  left: -4%;
+  transform: translateY(16px) scale(0.97) scaleX(-1);
+}
+
+.gender-banner:hover .gender-photo {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.gender-banner:hover .gender-photo-f {
+  transform: translateY(0) scale(1) scaleX(-1);
+}
+
+/* Touch devices can't hover, so show the photo plainly */
+@media (hover: none) {
+  .gender-photo {
+    opacity: 0.85;
+    transform: translateY(0) scale(1);
+  }
+  .gender-photo-f {
+    transform: translateY(0) scale(1) scaleX(-1);
+  }
+}
+
 .gender-banner::before {
   content: "";
   position: absolute;
   inset: 0;
   opacity: 0.9;
+}
+
+.gender-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(10,10,10,0.92) 0%, rgba(10,10,10,0.5) 45%, transparent 75%);
+  z-index: 0;
 }
 
 .gender-banner-m::before {
