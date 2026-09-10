@@ -43,6 +43,21 @@ export default function Home() {
 
       <HazardStrip />
 
+      <section className="wrap gender-section">
+        <Link to="/loja?genero=Masculino" className="gender-banner gender-banner-m">
+          <span className="mono gender-eyebrow">Para o treino</span>
+          <span className="gender-title">Masculino</span>
+          <span className="mono gender-cta">Comprar agora →</span>
+        </Link>
+        <Link to="/loja?genero=Feminino" className="gender-banner gender-banner-f">
+          <span className="mono gender-eyebrow">Para o treino</span>
+          <span className="gender-title">Feminino</span>
+          <span className="mono gender-cta">Comprar agora →</span>
+        </Link>
+      </section>
+
+      <HazardStrip />
+
       <section className="wrap deals-section">
         <p className="eyebrow mono">Categorias em destaque</p>
         <div className="deals-grid">

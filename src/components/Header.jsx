@@ -4,7 +4,7 @@ import { ShoppingBag, User, LogOut, ChevronDown, Heart, Menu, X } from "lucide-r
 import { useCart } from "../context/CartContext";
 import { useAuth } from "../context/AuthContext";
 import { useFavorites } from "../context/FavoritesContext";
-import { CATEGORIES } from "../data/products";
+import { CATEGORIES, GENDERS } from "../data/products";
 
 export default function Header() {
   const { totalItems } = useCart();
@@ -37,6 +37,11 @@ export default function Header() {
     navigate(cat === "Todos" ? "/loja" : `/loja?categoria=${encodeURIComponent(cat)}`);
   }
 
+  function goToGender(gender) {
+    setMobileOpen(false);
+    navigate(`/loja?genero=${encodeURIComponent(gender)}`);
+  }
+
   return (
     <header className="site-header">
       <div className="wrap navbar">
@@ -46,6 +51,13 @@ export default function Header() {
 
         <nav className="nav-links">
           <Link to="/">Início</Link>
+
+          <button onClick={() => goToGender("Masculino")} className="gender-link">
+            Masculino
+          </button>
+          <button onClick={() => goToGender("Feminino")} className="gender-link">
+            Feminino
+          </button>
 
           <div className="category-menu" ref={menuRef}>
             <button
@@ -110,6 +122,8 @@ export default function Header() {
         <div className="mobile-nav">
           <Link to="/" onClick={() => setMobileOpen(false)}>Início</Link>
           <Link to="/loja" onClick={() => setMobileOpen(false)}>Loja</Link>
+          <button onClick={() => goToGender("Masculino")} className="mobile-nav-gender">Masculino</button>
+          <button onClick={() => goToGender("Feminino")} className="mobile-nav-gender">Feminino</button>
 
           <p className="mono mobile-nav-label">Categorias</p>
           <div className="mobile-nav-categories">

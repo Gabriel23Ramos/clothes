@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { InstagramIcon, WhatsAppIcon } from "./BrandIcons";
 
 export default function Footer() {
   return (
@@ -12,9 +13,12 @@ export default function Footer() {
             todas as peças.
           </p>
           <div className="footer-socials">
-            <a href="#" aria-label="Instagram">Instagram</a>
-            <a href="#" aria-label="TikTok">TikTok</a>
-            <a href="#" aria-label="WhatsApp">WhatsApp</a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <InstagramIcon size={19} />
+            </a>
+            <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <WhatsAppIcon size={19} />
+            </a>
           </div>
         </div>
 
@@ -42,7 +46,12 @@ export default function Footer() {
 
       <div className="wrap footer-bottom">
         <p className="mono muted">© 2026 Urban Vest Store. CNPJ: 00.000.000/0001-00</p>
-        <p className="mono muted">Feito no Brasil · Compressão certificada</p>
+        <p className="mono muted">
+          Site feito por{" "}
+          <a href="https://gabrielresume.vercel.app/" target="_blank" rel="noopener noreferrer" className="footer-credit">
+            Gabriel
+          </a>
+        </p>
       </div>
     </footer>
   );
