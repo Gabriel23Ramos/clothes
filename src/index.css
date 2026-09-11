@@ -533,11 +533,11 @@ h1, h2, h3, h4 {
 }
 
 .gender-banner-m .gender-photo {
-  right: -2%;
+  right: -8%;
 }
 
 .gender-banner-f .gender-photo {
-  left: -2%;
+  left: -6%;
 }
 
 .gender-banner-revealed .gender-photo {
@@ -1355,7 +1355,92 @@ input:focus {
     cursor: pointer;
   }
   .product-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px 8px;
+  }
+  .corner-tag {
+    width: 26px;
+    height: 26px;
+  }
+  .code-tag {
+    display: none;
+  }
+  .category-tag {
+    display: none;
+  }
+  .discount-badge {
+    top: 6px;
+    left: 6px;
+    font-size: 9px;
+    padding: 2px 5px;
+  }
+  .favorite-btn {
+    width: 22px;
+    height: 22px;
+    bottom: 6px;
+    right: 6px;
+  }
+  .favorite-btn svg {
+    width: 11px;
+    height: 11px;
+  }
+  .product-info {
+    padding: 8px 6px 12px;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .product-info h3 {
+    font-size: 11px;
+    line-height: 1.25;
+    margin-bottom: 2px;
+  }
+  .product-info .spec {
+    display: none;
+  }
+  .product-side {
+    text-align: left;
+  }
+  .price-original {
+    font-size: 10px;
+    margin-bottom: 0;
+  }
+  .price {
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+  .product-overlay {
+    padding: 10px;
+  }
+  .overlay-name {
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+  .overlay-price {
+    font-size: 11px;
+    margin-bottom: 6px;
+  }
+  .overlay-price-original {
+    font-size: 9px;
+  }
+  .overlay-material,
+  .overlay-desc {
+    display: none;
+  }
+  .overlay-label {
+    font-size: 8px;
+    margin-bottom: 4px;
+  }
+  .size-row {
+    gap: 3px;
+    margin-bottom: 8px;
+  }
+  .size-btn {
+    font-size: 8px;
+    padding: 4px 6px;
+  }
+  .overlay-add-btn {
+    font-size: 9px;
+    padding: 8px;
   }
   .hero {
     padding: 50px 20px 40px;
