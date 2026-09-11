@@ -38,7 +38,7 @@ export default function GenderBanner({ to, image, label, eyebrow = "Para o trein
       <div className="gender-sweep" aria-hidden="true" />
       <span className="mono gender-eyebrow">{eyebrow}</span>
       <span className="gender-title">{label}</span>
-      <span className="mono gender-cta">Comprar agora →</span>
+      <span className="mono gender-cta">Comprar agora</span>
     </Link>
   );
 }

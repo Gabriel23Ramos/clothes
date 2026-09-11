@@ -472,7 +472,7 @@ h1, h2, h3, h4 {
 
 .gender-banner {
   position: relative;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 16 / 11;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -525,10 +525,10 @@ h1, h2, h3, h4 {
 .gender-photo {
   position: absolute;
   bottom: 0;
-  height: 122%;
+  height: 98%;
   width: auto;
   object-fit: contain;
-  transform: scale(1.35);
+  transform: scale(1.22);
   transition: transform 1.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -542,6 +542,30 @@ h1, h2, h3, h4 {
 
 .gender-banner-revealed .gender-photo {
   transform: scale(1);
+}
+
+.gender-banner:hover {
+  box-shadow: 0 0 0 1px var(--hivis), 0 24px 60px -24px rgba(217, 255, 63, 0.4);
+}
+
+.gender-banner:hover .gender-photo {
+  transform: scale(1.05);
+}
+
+.gender-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.gender-cta::after {
+  content: "→";
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.gender-banner:hover .gender-cta::after {
+  transform: translateX(6px);
 }
 
 .gender-sweep {
