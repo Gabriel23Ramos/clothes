@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import HazardStrip from "../components/HazardStrip";
 import ProductCard from "../components/ProductCard";
+import GenderBanner from "../components/GenderBanner";
 import { PRODUCTS, CATEGORIES, discountPercent } from "../data/products";
 
 export default function Home() {
@@ -44,18 +45,18 @@ export default function Home() {
       <HazardStrip />
 
       <section className="wrap gender-section">
-        <Link to="/loja?genero=Masculino" className="gender-banner gender-banner-m">
-          <img src="/runner-male.png" alt="" className="gender-photo gender-photo-m" aria-hidden="true" />
-          <span className="mono gender-eyebrow">Para o treino</span>
-          <span className="gender-title">Masculino</span>
-          <span className="mono gender-cta">Comprar agora →</span>
-        </Link>
-        <Link to="/loja?genero=Feminino" className="gender-banner gender-banner-f">
-          <img src="/runner-female.png" alt="" className="gender-photo gender-photo-f" aria-hidden="true" />
-          <span className="mono gender-eyebrow">Para o treino</span>
-          <span className="gender-title">Feminino</span>
-          <span className="mono gender-cta">Comprar agora →</span>
-        </Link>
+        <GenderBanner
+          to="/loja?genero=Masculino"
+          image="/runner-male.png"
+          label="Masculino"
+          side="m"
+        />
+        <GenderBanner
+          to="/loja?genero=Feminino"
+          image="/runner-female.png"
+          label="Feminino"
+          side="f"
+        />
       </section>
 
       <HazardStrip />
