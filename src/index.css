@@ -525,19 +525,20 @@ h1, h2, h3, h4 {
 .gender-photo {
   position: absolute;
   bottom: 0;
-  height: 98%;
+  height: 90%;
   width: auto;
   object-fit: contain;
-  transform: scale(1.22);
+  transform: scale(1.18);
+  transform-origin: bottom center;
   transition: transform 1.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .gender-banner-m .gender-photo {
-  right: -8%;
+  right: -10%;
 }
 
 .gender-banner-f .gender-photo {
-  left: -6%;
+  left: -8%;
 }
 
 .gender-banner-revealed .gender-photo {
@@ -549,7 +550,7 @@ h1, h2, h3, h4 {
 }
 
 .gender-banner:hover .gender-photo {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 .gender-cta {
