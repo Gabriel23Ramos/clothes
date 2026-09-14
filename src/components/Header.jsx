@@ -1,15 +1,17 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { ShoppingBag, User, LogOut, ChevronDown, Heart, Menu, X } from "lucide-react";
+import { ShoppingBag, User, LogOut, ChevronDown, Heart, Menu, X, Sun, Moon } from "lucide-react";
 import { useCart } from "../context/CartContext";
 import { useAuth } from "../context/AuthContext";
 import { useFavorites } from "../context/FavoritesContext";
+import { useTheme } from "../context/ThemeContext";
 import { CATEGORIES, GENDERS } from "../data/products";
 
 export default function Header() {
   const { totalItems } = useCart();
   const { account, isLoggedIn, logOut } = useAuth();
   const { totalFavorites } = useFavorites();
+  const { theme, toggleTheme } = useTheme();
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -97,6 +99,14 @@ export default function Header() {
         </nav>
 
         <div className="header-actions">
+          <button
+            onClick={toggleTheme}
+            className="theme-toggle-btn"
+            aria-label={theme === "dark" ? "Ativar tema claro" : "Ativar tema escuro"}
+          >
+            {theme === "dark" ? <Sun size={17} /> : <Moon size={17} />}
+          </button>
+
           <Link to="/favoritos" className="favorites-link" aria-label="Favoritos">
             <Heart size={18} />
             {totalFavorites > 0 && <span className="favorites-count mono">{totalFavorites}</span>}
@@ -143,6 +153,11 @@ export default function Header() {
               <User size={14} style={{ marginRight: 8 }} /> Entrar
             </Link>
           )}
+
+          <button onClick={toggleTheme} className="mobile-nav-account">
+            {theme === "dark" ? <Sun size={14} /> : <Moon size={14} />}
+            {theme === "dark" ? " Tema claro" : " Tema escuro"}
+          </button>
         </div>
       )}
     </header>

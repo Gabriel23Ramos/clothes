@@ -1,5 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
+import { ThemeProvider } from "./context/ThemeContext";
 import { CartProvider } from "./context/CartContext";
 import { AuthProvider } from "./context/AuthContext";
 import { FavoritesProvider } from "./context/FavoritesContext";
@@ -16,26 +17,28 @@ import NotFound from "./pages/NotFound";
 
 export default function App() {
   return (
-    <AuthProvider>
-      <FavoritesProvider>
-        <CartProvider>
-          <PromoBar />
-          <HazardStrip />
-          <Header />
-          <main>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/loja" element={<Shop />} />
-              <Route path="/favoritos" element={<Favorites />} />
-              <Route path="/carrinho" element={<Cart />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </main>
-          <HazardStrip />
-          <Footer />
-        </CartProvider>
-      </FavoritesProvider>
-    </AuthProvider>
+    <ThemeProvider>
+      <AuthProvider>
+        <FavoritesProvider>
+          <CartProvider>
+            <PromoBar />
+            <HazardStrip />
+            <Header />
+            <main>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/loja" element={<Shop />} />
+                <Route path="/favoritos" element={<Favorites />} />
+                <Route path="/carrinho" element={<Cart />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </main>
+            <HazardStrip />
+            <Footer />
+          </CartProvider>
+        </FavoritesProvider>
+      </AuthProvider>
+    </ThemeProvider>
   );
 }
